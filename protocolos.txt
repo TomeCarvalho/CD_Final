@@ -1,0 +1,27 @@
+todas as mensagens possuem 2 bytes que indicam o comprimento da mensagem a ser lida bla bla
+
+toda --> indica que espera como resposta
+
+Hello: --> ver qual tem menor contador para distribuir o trabalho
+{method: "HELLO"}
+
+Hello-res:
+work: quantas combinacoes ainda faltam
+{method: "HELLOREP", work: final_counter - counter}
+
+startindexreq: --> contador de onde deve comecar
+{"method": "STARTINDEXREQ"}
+
+startindexrep:
+index: novo index inicial atribuido
+{"method": "STARTINDEXREP", "index": counter}
+
+endindexreq: --> index ate onde eu devo fazer. 
+basicamente, se existir algum index > meu start index --> esse index 'e meu objetivo
+{"method": "ENDINDEXREQ"}
+
+endindexrep: 
+{"method": "ENDINDEXREP"}
+
+success:
+{"method": "SUCCESS"}
